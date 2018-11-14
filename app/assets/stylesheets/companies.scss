@@ -1,0 +1,162 @@
+/*new*/
+
+
+#regist_company {
+  padding: 30px;
+}
+
+#list-head {
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  list-style: none;
+  display: inline-flex;
+    display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+
+}
+
+.list-head li {
+  display: inline-block;
+}
+
+.company_new_btn {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+#company_new {
+  width: 700px;
+  margin: 0 auto;
+}
+
+
+
+
+
+/*index*/
+
+
+.company_table td {
+  padding-top: 3px;
+}
+
+
+#company_list a {
+  text-decoration: none;
+  color: #1b6582;
+}
+
+#company_list a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  transition-duration: .2s;
+}
+
+.attention {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 80%;
+    padding: 25px 10px 7px;
+    border: solid 2px #125f7e;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.attention .box_attention {
+  width: 531px;
+  margin: 0 auto;
+}
+
+.attention .box_title {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    background: #125f7e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.attention p {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    /*text-align: center;*/
+}
+
+.attention .check_icon {
+  color: #125f7e;
+}
+
+
+.under {
+  background: linear-gradient(transparent 70%, #cfe4ef 70%);
+}
+
+
+
+
+/*show*/
+
+#show_company {
+  padding: 30px;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#show_company ul {
+  border: solid 2px #125f7e;
+}
+
+#show_company ul li {
+  padding: 5px 7px;
+  list-style-type: none!important;
+  font-weight: bold;
+}
+
+#show_company .show_icon {
+  color: #125f7e;
+}
+
+
+.show_list {
+  padding: 5px 22px;
+  word-wrap: break-word;
+}
+
+.show_list p {
+    border-left: solid 2px #125f7e;
+    background: rgba(222, 222, 222, 0.22);
+    padding-left: 5px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+
+.show_list p a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  transition-duration: .2s;
+  text-decoration: none;
+}
+
+.show_list:last-child {
+  height: 190px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

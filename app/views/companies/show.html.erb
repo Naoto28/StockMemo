@@ -1,0 +1,35 @@
+<section id="mainbar">
+    <div id="show_company">
+      <ul class="show_company">
+        <li><i class="fas fa-chevron-circle-right show_icon"></i> 証券コード</li>
+        <div class="show_list"><p><%= link_to "https://minkabu.jp/stock/#{@company.stock_code}", target: "_blank" do %><%= @company.stock_code %><% end %></p></div>
+        <li><i class="fas fa-chevron-circle-right show_icon"></i> 企業名</li>
+        <div class="show_list"><p><%= @company.company_name %></p></div>
+        <li><i class="fas fa-chevron-circle-right show_icon"></i> メモ</li>
+        <div class="show_list"><p><%= @company.text %></p></div>
+      </ul>
+
+
+
+<%= link_to edit_company_path(@company.id) do %>
+<p>edit</p>
+<% end %>
+
+
+<%= link_to "destroy", company_path(@company.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+
+
+
+<!--     <div class="attention">
+      <span class="box_title"><i class="fas fa-exclamation-triangle"></i> 操作方法</span><br>
+      <div class="box_attention">
+        <p><i class="far fa-check-circle check_icon"></i> 証券コードのリンクをクリックすると<span class="under">外部サイト(みんなの株式)</span>へと移動します。</p><br>
+        <p><i class="far fa-check-circle check_icon"></i> 企業名のリンクをクリックすると<span class="under">企業詳細ページ</span>へと移動します。</p><br>
+      </div>
+    </div> -->
+
+
+
+    </div>
+</section>
+

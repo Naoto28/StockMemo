@@ -1,0 +1,25 @@
+  <section id="mainbar" >
+    <div id="company_new">
+      <div id="company_form">
+        <%= form_for @company, url: companies_path do |f| %>
+        <h4 class="" id="form_title"></h4>
+        <div class="field">
+          <%= f.label :証券コード, class: "control-label form_name" %>
+          <%= f.text_field :stock_code, placeholder: "整数4桁で入力してください", class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= f.label :企業名, class: "control-label form_name"%>
+          <%= f.text_field :company_name, placeholder: "例：東京エレクトロン", class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= f.label :メモ, class: "control-label form_name" %>
+          <%= f.text_area :text, placeholder: "例：決算がとても良かった", class: "form-control", rows: "5"  %>
+        </div>
+        <div class="company_new_btn">
+        <%= f.submit value: "登録する", class: "btn btn-warning" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
