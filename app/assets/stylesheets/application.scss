@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 .clearfix::after {
@@ -257,20 +258,37 @@ footer {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
+/*signページ*/
 
+.sign_frame {
+  margin: 0 auto;
+  padding: 10px;
+}
 
+.sign_frame .field {
+  width: 300px;
+}
 
+.sign_frame label{
+  margin: 0;
+  padding: 10px 10px 3px 10px;
+}
 
+.sign_frame_btn {
+  margin: 0 auto;
+  font-weight: bold;
+}
 
+.under_bar {
+  height: 1px;
+  width: 50px;
+  background-color: #42849a;
+  margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
+.form_space {
+  height: 10px;
+}
 
 
 

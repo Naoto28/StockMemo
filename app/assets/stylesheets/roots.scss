@@ -95,12 +95,22 @@
 #top_firld_main {
   display: table;
   width: 65%;
-  margin: 0 auto;
-  margin-top: 115px;
+  /*margin: 0 auto;*/
+  /*margin-top: 115px;*/
   background: rgba(255,255,255, .9);
   text-align: center;
   padding: 10px;
   border: solid 1px #ddd5d1;
+  position: absolute;
+
+
+top: 55%;
+left: 50%;
+-ms-transform: translate(-50%,-50%);
+-webkit-transform : translate(-50%,-50%);
+transform : translate(-50%,-50%);
+/*width: 100px;*/
+
 }
 
 .firld_logo {
@@ -129,14 +139,6 @@
 
 .about-firld-title h3 {
   margin-bottom: 0px;
-}
-
-.under_bar {
-  height: 2px;
-  width: 150px;
-  background-color: #42849a;
-  display: inline-block;
-  margin: 5px 0px 35px 0px;
 }
 
 
@@ -189,6 +191,7 @@
       width: 103%;
       height: 107%;
       background-color: rgba(255, 255, 255, 0.2);
+      /*z-index: -1000;*/
 }
 
 
