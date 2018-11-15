@@ -32,7 +32,7 @@
       </ul>
 
       <% unless flash.empty? %>
-        <div id="message_board" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+        <div id="message_board" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="1500">
           <span class="sign_message"><%= flash[:notice] %></span>
         </div>
       <% end %>
@@ -41,47 +41,33 @@
       <div id="top_firld_main" data-aos="zoom-out-down"  data-aos-duration="1100">
         <div class=""><img class="firld_logo" src="/StockMemo.png" alt="StockMemo" height="80"></div>
         <div class="frame">
-
-        <div class="sign_frame">
-          <div class="sign_frame_form">
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="field">
-                <%= f.label :メールアドレス %><div class="under_bar"></div><div class="form_space"></div>
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          <div class="sign_frame">
+            <div class="sign_frame_form">
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="field">
+                  <%= f.label :メールアドレス %><div class="under_bar"></div><div class="form_space"></div>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+                </div>
+                <div class="field">
+                  <%= f.label :パスワード %><div class="under_bar"></div><div class="form_space"></div>
+                  <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+                </div>
+                <% if devise_mapping.rememberable? -%>
+                <div class="field-check">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :ログイン情報を保存する %>
+                </div>
+              <% end -%>
+            </div>
+            <div class="sign_frame_btn">
+              <div class="actions">
+                <%= button_tag :type => "submit", :class =>"type3" do %>
+                  ログイン
+                <% end %>
+                <% end %>
               </div>
-              <div class="field">
-                <%= f.label :パスワード %><div class="under_bar"></div><div class="form_space"></div>
-                <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
-              </div>
-              <% if devise_mapping.rememberable? -%>
-              <div class="field-check">
-                <%= f.check_box :remember_me %>
-                <%= f.label :ログイン情報を保存する %>
-              </div>
-            <% end -%>
-          </div>
-          <div class="sign_frame_btn">
-            <div class="actions">
-
-
-
-              <%= button_tag :type => "submit", :class =>"type3" do %>
-                ログイン
-              <% end %>
-              <% end %>
-
-
-
-
-
-
-
             </div>
           </div>
-        </div>
-
-
-
         </div>
       </div>
 
