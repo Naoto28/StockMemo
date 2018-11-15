@@ -9,6 +9,8 @@ devise_for :users, :controllers => {
   :registrations => 'users/registrations'
 }
 
+
+
 root "companies#new"
 resources :companies
 
