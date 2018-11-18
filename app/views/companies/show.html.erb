@@ -10,15 +10,17 @@
       </ul>
 
 
+<div class="company_show_btn">
+<div class="company_edit_btn">
+  <%= link_to edit_company_path(@company.id) do %>
+  <p>編集</p>
+  <% end %>
+</div>
 
-<%= link_to edit_company_path(@company.id) do %>
-<p>edit</p>
-<% end %>
-
-
-<%= link_to "destroy", company_path(@company.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
-
-
+<div class="company_destroy_btn">
+  <%= link_to "削除", company_path(@company.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+  </div>
+</div>
 
 <!--     <div class="attention">
       <span class="box_title"><i class="fas fa-exclamation-triangle"></i> 操作方法</span><br>
