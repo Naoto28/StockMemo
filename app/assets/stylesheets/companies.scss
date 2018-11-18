@@ -100,7 +100,7 @@ tbody {
     width: 80%;
     padding: 25px 10px 7px;
     border: solid 2px #125f7e;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .attention .box_attention {
@@ -189,13 +189,41 @@ tbody {
 }
 
 
+.company_show_btn {
+  display: flex;
+  float: right;
+  padding: 10px;
+  border: solid 2px #125f7e;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+}
+
+.company_show_btn p {
+  margin-bottom: 0px;
+  color: #095f7f;
+}
+
+.company_destroy_btn {
+  margin: 0px 5px 0px 5px;
+  padding: 0px;
+}
+
+.company_destroy_btn a {
+  color: #095f7f ;
+}
+
+.company_edit_btn {
+  margin: 0px 10px 0px 5px;
+  padding-right: 16px;
+  border-right: solid 1px #dedede;
+}
 
 
-
-
-
-
-
+.company_destroy_btn a:hover,.company_edit_btn :hover {
+  color: rgba(0, 0, 0, 0.5);
+  transition-duration: .2s;
+  text-decoration: none;
+}
 
 
 
