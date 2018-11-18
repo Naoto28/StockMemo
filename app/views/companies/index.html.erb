@@ -1,27 +1,26 @@
 <section id="mainbar">
   <div id="regist_company">
-    <table class="company_table" style="table-layout:fixed;width:100%;">
+    <table class="company_table">
       <thead>
         <tr>
-          <th colspan="1" style="width :15%;">登録日時</th>
-          <th colspan="1" style="width :15%;">証券コード</th>
-          <th colspan="1" style="width :25%;">企業名</th>
-          <th colspan="1" style="width :45%;">メモ</th>
+          <th class="value">登録日時</th>
+          <th class="value">証券コード</th>
+          <th class="value">企業名</th>
+          <th>メモ</th>
         </tr>
       </thead>
-      <div class="company_list_body">
         <tbody>
           <% @company.each do |f| %>
-            <tr id="company_list" style="">
-              <td><%= f.created_at.strftime('%Y/%m/%d') %></td>
-              <td class="collapsing" id="pages"><%= link_to "https://minkabu.jp/stock/#{f.stock_code}", target: "_blank" do %><%= f.stock_code %></td><% end %>
-              <td class="collapsing" id="pages"><%= link_to company_path(f) do %><%= f.company_name %></td><% end %>
-              <td class="collapsing" id="pages"><%= f.text %></td>
+            <tr id="company_list">
+              <td class="value"><%= f.created_at.strftime('%Y/%m/%d') %></td>
+              <td class="value" id="pages"><%= link_to "https://minkabu.jp/stock/#{f.stock_code}", target: "_blank" do %><%= f.stock_code %></td><% end %>
+              <td class="value" id="pages"><%= link_to company_path(f) do %><%= f.company_name %></td><% end %>
+              <td id="pages"><%= f.text.truncate(30) %></td>
             </tr>
           <% end %>
         </tbody>
-      </div>
     </table>
+    <!-- <div class="list_space"></div> -->
     <div class="attention">
         <span class="box_title"><i class="fas fa-exclamation-triangle"></i> 操作方法</span><br>
         <div class="box_attention">
