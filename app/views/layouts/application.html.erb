@@ -15,6 +15,18 @@
       <%= link_to root_path do %>
         <img class="logo" src="/StockMemo.png" alt="StockMemo" height="60">
       <% end %>
+            <ul class="header_list">
+        <li class="" id="">
+          <% if user_signed_in? %>
+            <%= link_to '企業登録', new_company_path, class: "nav-items" %>
+            <%= link_to '企業一覧', companies_path, class: "nav-items" %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-items" %>
+          <% else %>
+            <%= link_to '新規登録', new_user_registration_path, class: "nav-items" %>
+            <%= link_to 'ログイン', new_user_session_path, class: "nav-items" %>
+          <% end %>
+        </li>
+      </ul>
     </header>
 
     <div class="space"></div>

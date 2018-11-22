@@ -83,7 +83,7 @@ header img {
 }
 
 #side-menu li .side_icon {
-  color: #5d627b;
+  color: #1d6986;
 }
 
 
@@ -289,5 +289,29 @@ footer {
   height: 10px;
 }
 
+
+
+/*ボタン*/
+
+.btn-primary {
+  background-color: #347a92;
+  border-color: #176a87;
+  padding: 10px 50px;
+}
+
+.btn-primary:hover {
+  background-color: #5f8d9c;
+  border-color: #176a87;
+  transition-duration: .4s;
+}
+
+.btn-primary[disabled]:hover {
+  background-color: #5f8d9c;
+  border-color: #176a87;
+}
+
+.field label {
+  margin: 5px 0px;
+}
 
 
