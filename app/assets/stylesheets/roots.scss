@@ -95,22 +95,16 @@
 #top_firld_main {
   display: table;
   width: 65%;
-  /*margin: 0 auto;*/
-  /*margin-top: 115px;*/
   background: rgba(255,255,255, .9);
   text-align: center;
   padding: 10px;
   border: solid 1px #ddd5d1;
   position: absolute;
-
-
-top: 55%;
-left: 50%;
--ms-transform: translate(-50%,-50%);
--webkit-transform : translate(-50%,-50%);
-transform : translate(-50%,-50%);
-/*width: 100px;*/
-
+  top: 55%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
 }
 
 .firld_logo {
@@ -150,48 +144,47 @@ transform : translate(-50%,-50%);
     font-weight: bold;
 }
 
-    .type3::after,
-    .type3::before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 30%;
-      height: 30%;
-      border: 2px solid;
-      transition: all 0.5s ease;
-      border-radius: 1px;
-    }
+.type3::after,
+.type3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border: 2px solid;
+  transition: all 0.5s ease;
+  border-radius: 1px;
+}
 
-    .type3::after {
-      bottom: 0;
-      right: 0;
-      border-top-color: transparent;
-      border-left-color: transparent;
-      border-bottom-color: #42849a;
-      border-right-color: #42849a;
-    }
+.type3::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #42849a;
+  border-right-color: #42849a;
+}
 
-    .type3::before {
-      top: 0;
-      left: 0;
-      border-bottom-color: transparent;
-      border-right-color: transparent;
-      border-top-color: #42849a;
-      border-left-color: #42849a;
-    }
+.type3::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #42849a;
+  border-left-color: #42849a;
+}
 
-    .type3:hover:after,
-    .type3:hover:before {
-      border-bottom-color: #42849a;
-      border-right-color: #42849a;
-      border-top-color: #42849a;
-      border-left-color: #42849a;
+.type3:hover:after,
+.type3:hover:before {
+  border-bottom-color: #42849a;
+  border-right-color: #42849a;
+  border-top-color: #42849a;
+  border-left-color: #42849a;
 /*      width: 103%;
-      height: 107%;*/
-      width: 103%;
-      height: 107%;
-      background-color: rgba(255, 255, 255, 0.2);
-      /*z-index: -1000;*/
+  height: 107%;*/
+  width: 103%;
+  height: 107%;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 
