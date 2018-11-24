@@ -39,6 +39,7 @@
 
 table {
   margin:0 auto;
+  width: 100%;
 }
 
 thead, tbody {
@@ -47,13 +48,16 @@ thead, tbody {
 
 thead {
   border-right: 1px solid #095f7f;
+  border-left: 1px solid #095f7f;
 }
 
 tbody {
   border-bottom: 1px solid #095f7f;
-  padding-bottom: 3px;
+  padding-bottom: 5px;
   overflow-y: scroll;
   height: 200px;
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
 }
 
 .value {
@@ -79,8 +83,12 @@ tbody {
   border-left: 1px solid #dedede;
 }
 
-.company_table td:last-child {
-  border-right: 1px solid #dedede;
+.company_table td:first-child {
+  border: none;
+}
+
+.company_table th:first-child {
+  border: none;
 }
 
 #company_list a {

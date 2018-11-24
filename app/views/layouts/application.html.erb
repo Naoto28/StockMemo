@@ -59,24 +59,24 @@
             <div class="maru1">
               <span>1</span>
             </div>
-            <%= link_to root_path do %>
-              <span>企業登録</span>
+            <%= link_to "https://minkabu.jp/stock/#{@rank_first}" do %>
+              <span> <%= @rank_first %></span><i class="fas fa-angle-double-right rank_icon"></i><span class="rank_name"><%= @first_name.company_name %></span>
             <% end %>
           </li>
           <li class="rank_list">
             <div class="maru2">
               <span>2</span>
             </div>
-            <%= link_to companies_path do %>
-              <span>登録企業一覧</span>
+            <%= link_to "https://minkabu.jp/stock/#{@rank_second}" do %>
+              <span><%= @rank_second %></span><i class="fas fa-angle-double-right rank_icon"></i><span class="rank_name"><%= @second_name.company_name %></span>
             <% end %>
           </li>
           <li class="rank_list">
             <div class="maru3">
               <span>3</span>
             </div>
-            <%= link_to new_company_path do %>
-              <span>ログアウト</span>
+            <%= link_to "https://minkabu.jp/stock/#{@rank_third}" do %>
+              <span><%= @rank_third %></span><i class="fas fa-angle-double-right rank_icon"></i><span class="rank_name"><%= @third_name.company_name %></span>
             <% end %>
           </li>
         </ul>
@@ -188,8 +188,8 @@
             <% end %>
           </li>
           <li>
-            <%= link_to new_company_path do %>
-            <span>登録企業一覧</span>
+            <%= link_to companies_path do %>
+            <span>企業一覧</span>
             <% end %>
           </li>
           <li>
