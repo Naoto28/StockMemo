@@ -15,7 +15,7 @@
               <td class="value"><%= f.created_at.strftime('%Y/%m/%d') %></td>
               <td class="value" id="pages"><%= link_to "https://minkabu.jp/stock/#{f.stock_code}", target: "_blank" do %><%= f.stock_code %></td><% end %>
               <td class="value" id="pages"><%= link_to company_path(f) do %><%= f.company_name %></td><% end %>
-              <td id="pages"><%= f.text.truncate(30) %></td>
+              <td id="pages"><%= f.text.truncate(31) %></td>
             </tr>
           <% end %>
         </tbody>
