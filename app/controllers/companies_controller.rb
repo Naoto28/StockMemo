@@ -15,7 +15,6 @@ class CompaniesController < ApplicationController
     @second_name = Company.where(stock_code: @rank_second).first
     @third_name = Company.where(stock_code: @rank_third).first
 
-
   end
 
   def show

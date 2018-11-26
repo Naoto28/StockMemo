@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
 
-  # before_action :forbid_login_user
-
   def after_sign_out_path_for(resource)
     flash[:notice] = "ログアウトしました"
     top_path
@@ -16,4 +14,6 @@ class ApplicationController < ActionController::Base
     flash[:notice] = "登録が完了しました"
     new_company_path
   end
+
+
 end
