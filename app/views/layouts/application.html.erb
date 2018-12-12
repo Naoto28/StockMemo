@@ -96,7 +96,7 @@
 
 
   <!-- ハンバーガーメニュー -->
-<div class="header">
+<div class="header responsib-geader">
       <%= link_to root_path do %>
         <img class="logo" src="/StockMemo.png" alt="StockMemo" height="50">
       <% end %>
@@ -107,25 +107,18 @@
     <span class="bottom"></span>
   </div>
 
+
   <div id="navigation" class="navigation">
     <div class="navigation_screen">
       <nav class="navigation_wrapper">
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
-        <div class="navigation_item"><a href ="#">CONTENT</a></div>
+        <% if user_signed_in? %>
+          <div class="navigation_item"><%= link_to '企業登録', new_company_path, class: "" %></div>
+          <div class="navigation_item"><%= link_to '企業一覧', companies_path, class: "" %></div>
+          <div class="navigation_item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "" %></div>
+        <% else %>
+          <div class="navigation_item"><%= link_to '新規登録', new_user_registration_path, class: "" %></div>
+          <div class="navigation_item"><%= link_to 'ログイン', new_user_session_path, class: "" %></div>
+        <% end %>
       </nav>
     </div>
   </div>
