@@ -1,4 +1,5 @@
 <section id="mainbar">
+  <p class="companies__title">企業一覧</p>
   <div id="regist_company">
     <table class="company_table">
       <thead>
@@ -14,16 +15,16 @@
             <tr id="company_list">
               <td class="value"><%= f.created_at.strftime('%Y/%m/%d') %></td>
               <td class="value" id="pages"><%= link_to "https://minkabu.jp/stock/#{f.stock_code}", target: "_blank" do %><%= f.stock_code %></td><% end %>
-              <td class="value" id="pages"><%= link_to company_path(f) do %><%= f.company_name %></td><% end %>
+              <td class="value" id="pages"><%= link_to company_path(f), data: {"turbolinks" => false} do %><%= f.company_name %></td><% end %>
               <td id="pages"><%= f.text.truncate(31) %></td>
             </tr>
           <% end %>
         </tbody>
     </table>
     <!-- <div class="list_space"></div> -->
-    <div class="attention">
-        <span class="box_title"><i class="fas fa-exclamation-triangle"></i> 操作方法</span><br>
-        <div class="box_attention">
+    <div class="attention__box">
+        <span class="attention__title"><i class="fas fa-exclamation-triangle"></i> 操作方法</span><br>
+        <div class="attention__word">
         <p><i class="far fa-check-circle check_icon"></i> 証券コードのリンクをクリックすると<span class="under">外部サイト(みんなの株式)</span>へと移動します。</p><br>
         <p><i class="far fa-check-circle check_icon"></i> 企業名のリンクをクリックすると<span class="under">企業詳細ページ</span>へと移動します。</p><br>
       </div>

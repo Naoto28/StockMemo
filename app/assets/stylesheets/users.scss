@@ -1,3 +1,55 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*signページ*/
+
+.sign_frame {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.sign_frame label{
+  margin: 0;
+  padding: 10px 10px 3px 10px;
+}
+
+.sign_frame_btn {
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.under_bar {
+  height: 1px;
+  width: 50px;
+  background-color: #42849a;
+  margin: 0 auto;
+}
+
+.form_space {
+  height: 10px;
+}
+
+.sign_frame .field {
+  width: 300px;
+}
+
+@media screen and (max-width:767px) {
+
+  .sign_frame_attention {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .sign_frame .field {
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+

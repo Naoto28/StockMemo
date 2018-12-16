@@ -20,20 +20,42 @@
   display: inline-block;
 }
 
-.company_new_btn {
+.company_new_btn_box {
   margin-top: 30px;
   text-align: center;
 }
 
+.btn .btn-primary .company_new_btn {
+  background-color: #005e80;
+}
 
 #company_new {
   width: 700px;
   margin: 0 auto;
 }
 
+.company_form_name {
+  margin: 5px 0px;
+}
 
+/*ボタン*/
 
+// .btn-primary {
+//   background-color: #347a92;
+//   border-color: #176a87;
+//   padding: 10px 50px;
+// }
 
+// .btn-primary:hover {
+//   background-color: #5f8d9c;
+//   border-color: #176a87;
+//   transition-duration: .4s;
+// }
+
+// .btn-primary[disabled]:hover {
+//   background-color: #5f8d9c;
+//   border-color: #176a87;
+// }
 
 /*index*/
 
@@ -71,7 +93,9 @@ tbody {
   width:90%;
 }
 
-
+.companies__title {
+  display: none;
+}
 
 .company_table th {
   padding-left: 5px;
@@ -101,7 +125,7 @@ tbody {
   transition-duration: .2s;
 }
 
-.attention {
+.attention__box {
     position: relative;
     margin: 0 auto;
     margin-top: 50px;
@@ -111,12 +135,12 @@ tbody {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-.attention .box_attention {
+.attention__box .attention__word {
   width: 531px;
   margin: 0 auto;
 }
 
-.attention .box_title {
+.attention__box .attention__title {
     position: absolute;
     display: inline-block;
     top: -2px;
@@ -130,13 +154,12 @@ tbody {
     font-weight: bold;
 }
 
-.attention p {
-    margin: 0;
-    padding: 0;
-    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+.attention__box p {
+  margin: 0;
+  padding: 0;
 }
 
-.attention .check_icon {
+.attention__box .check_icon {
   color: #125f7e;
 }
 
@@ -233,5 +256,99 @@ tbody {
   text-decoration: none;
 }
 
+.company_form_textarea {
+  resize: none;
+}
+
+.company_form_btn {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #FFF;
+  background: #005e80;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 1px #e3e3e3;
+  font-size: 15px;
+  outline: none;
+  transition: .4s;
+}
+
+.company_form_btn:hover {
+  background: #f6f6f6;
+  color: #005e80;
+}
+
+.company_form_btn:active {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+@media screen and (max-width:767px) {
 
 
+/*company__index__view*/
+
+  #regist_company {
+    padding: 0;
+  }
+
+  table {
+    table-layout: fixed;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    overflow-y: scroll;
+    height: 150px;
+    overflow-x: scroll;
+  }
+
+  #pages {
+    white-space: nowrap;
+  }
+
+  .attention__box {
+    width: 100%;
+    margin-top: 45px;
+  }
+
+  .attention__box .attention__word {
+    width: 0;
+    display: table-cell;
+    font-size: 12px;
+  }
+
+  .companies__title {
+    display: block;
+    position: relative;
+    padding: 0.6em;
+    background: #095f7f;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .companies__title:after {
+    position: absolute;
+    content: '';
+    top: 99%;
+    left: 30px;
+    border: 10px solid transparent;
+    border-top: 10px solid #095f7f;
+    width: 0;
+    height: 0;
+  }
+
+  /*company__show__view*/
+
+  #show_company {
+    padding: 0;
+  }
+
+}
