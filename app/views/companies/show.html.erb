@@ -10,7 +10,7 @@
     </ul>
     <div class="company_show_btn">
       <div class="company_edit_btn">
-        <%= link_to edit_company_path(@company.id) do %>
+        <%= link_to edit_company_path(@company.id), data: {"turbolinks" => false} do %>
         <p>編集</p>
         <% end %>
       </div>

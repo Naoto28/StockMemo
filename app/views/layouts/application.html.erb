@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
@@ -17,7 +17,7 @@
       <%= link_to root_path do %>
         <img class="logo" src="/StockMemo.png" alt="StockMemo" height="60">
       <% end %>
-            <ul class="header_list">
+      <ul class="header_list">
         <li class="" id="">
           <% if user_signed_in? %>
             <%= link_to '企業登録', new_company_path, class: "nav-items" %>
@@ -93,63 +93,53 @@
         <%= yield %>
       </div>
     </div>
-
-
-  <!-- ハンバーガーメニュー -->
-<div class="header responsib-geader">
-      <%= link_to root_path do %>
+    <!-- ハンバーガーメニュー -->
+    <div class="header responsib-geader">
+      <%= link_to root_path, data: {"turbolinks" => false} do %>
         <img class="logo" src="/StockMemo.png" alt="StockMemo" height="50">
       <% end %>
-
-  <div class="el_humburger">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-  </div>
-
-
-  <div id="navigation" class="navigation">
-    <div class="navigation_screen">
-      <nav class="navigation_wrapper">
-        <% if user_signed_in? %>
-          <div class="navigation_item"><%= link_to '企業登録', new_company_path, class: "" %></div>
-          <div class="navigation_item"><%= link_to '企業一覧', companies_path, class: "" %></div>
-          <div class="navigation_item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "" %></div>
-        <% else %>
-          <div class="navigation_item"><%= link_to '新規登録', new_user_registration_path, class: "" %></div>
-          <div class="navigation_item"><%= link_to 'ログイン', new_user_session_path, class: "" %></div>
-        <% end %>
-      </nav>
+      <div class="el_humburger">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+      <div id="navigation" class="navigation">
+        <div class="navigation_screen">
+          <nav class="navigation_wrapper">
+            <% if user_signed_in? %>
+              <div class="navigation_item"><%= link_to '企業登録', new_company_path, data: {"turbolinks" => false} %></div>
+              <div class="navigation_item"><%= link_to '企業一覧', companies_path, data: {"turbolinks" => false} %></div>
+              <div class="navigation_item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {"turbolinks" => false} %></div>
+            <% else %>
+              <div class="navigation_item"><%= link_to '新規登録', new_user_registration_path, class: "" %></div>
+              <div class="navigation_item"><%= link_to 'ログイン', new_user_session_path, class: "" %></div>
+            <% end %>
+          </nav>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
-<!-- フッター -->
-
-
+    <!-- フッター -->
     <div class="space"></div>
-
     <div id="footer_sab" class="clerefix">
       <div class="footer-left">
         <ul id="footer-menu">
           <li>
-            <%= link_to new_company_path do %>
+            <%= link_to new_company_path, data: {"turbolinks" => false} do %>
             <span>企業登録</span>
             <% end %>
           </li>
           <li>
-            <%= link_to companies_path do %>
+            <%= link_to companies_path, data: {"turbolinks" => false} do %>
             <span>企業一覧</span>
             <% end %>
           </li>
           <li>
-            <%= link_to top_path do %>
+            <%= link_to top_path, data: {"turbolinks" => false} do %>
             <span>トップページ</span>
             <% end %>
           </li>
           <li>
-            <%= link_to new_company_path do %>
+            <%= link_to destroy_user_session_path, method: :delete, data: {"turbolinks" => false} do %>
             <span>ログアウト</span>
             <% end %>
           </li>
@@ -170,16 +160,12 @@
       <div class="space_footer"></div>
       </div>
     </div>
-
     <footer class="clerefix">
       <span class="footer-text">Copyright ©StockMemo</span>
     </footer>
-
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-
   </body>
-
 </html>

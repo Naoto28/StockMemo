@@ -4,107 +4,126 @@
     <title>StockManage</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
   </head>
   <body class="clerefix">
-
-  <section id="mainbar">
-   <div class="top_main">
-     <header id="top_head">
-      <%= link_to root_path do %>
-       <img class="logo" src="/StockMemo.png" alt="StockMemo" height="60">
-      <% end %>
-      <ul class="header_list">
-        <li class="" id="">
-          <% if user_signed_in? %>
-            <%= link_to '企業登録', new_company_path, class: "nav-items" %>
-            <%= link_to '企業一覧', companies_path, class: "nav-items" %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-items" %>
-          <% else %>
-            <%= link_to '新規登録', new_user_registration_path, class: "nav-items" %>
-            <%= link_to 'ログイン', new_user_session_path, class: "nav-items" %>
+    <section id="mainbar">
+      <div class="top_main">
+        <header id="top_head">
+          <%= link_to root_path do %>
+            <img class="logo" src="/StockMemo.png" alt="StockMemo" height="60">
           <% end %>
-        </li>
-      </ul>
-
-      <% unless flash.empty? %>
-        <div id="message_board" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+          <ul class="header_list">
+            <li class="" id="">
+              <% if user_signed_in? %>
+                <%= link_to '企業登録', new_company_path, class: "nav-items" %>
+                <%= link_to '企業一覧', companies_path, class: "nav-items" %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-items" %>
+              <% else %>
+                <%= link_to '新規登録', new_user_registration_path, class: "nav-items" %>
+                <%= link_to 'ログイン', new_user_session_path, class: "nav-items" %>
+              <% end %>
+            </li>
+          </ul>
+          <% unless flash.empty? %>
+          <div id="message_board" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
           <span class="sign_message"><%= flash[:notice] %></span>
-        </div>
-      <% end %>
-     </header>
-
-      <div id="top_firld_main" data-aos="zoom-out-down"  data-aos-duration="1100">
-        <div class=""><img class="firld_logo" src="/StockMemo.png" alt="StockMemo" height="80"></div>
-        <h2><span>企業名を、その場でメモする<span class="title_under_bar">Stock Memo</span></span></h2>
-        <div class="frame">
-          <!-- ログイン時のビュー -->
-        <% if user_signed_in? %>
-          <div class="about-firld_left clerefix">
-            <div class="about-firld-title">
-              <h3><strong>企業をメモする</strong></h3>
-            </div>
-            <%= link_to new_company_path do %>
-              <button class="button type3"><span>企業登録</span></button>
-            <% end %>
           </div>
-          <div class="about-firld_right clerefix">
-            <div class="about-firld-title">
-              <h3><strong>メモした企業を見る</strong></h3>
-            </div>
-            <%= link_to companies_path do %>
-              <button class="button type3"><span>企業一覧</span></button>
-            <% end %>
-          </div>
-          <!-- 未ログイン時のビュー -->
-        <% else %>
-          <div class="about-firld_left clerefix">
-            <div class="about-firld-title">
-              <h3><strong>会員登録がまだの方</strong></h3>
-            </div>
-            <%= link_to new_user_registration_path do %>
-              <button class="button type3"><span>新規登録</span></button>
-            <% end %>
-          </div>
-          <div class="about-firld_right clerefix">
-          <div class="about-firld-title">
-            <h3><strong>会員登録がお済みの方</strong></h3>
-          </div>
-          <%= link_to new_user_session_path do %>
-            <button class="button type3"><span>ログイン</span></button>
           <% end %>
+        </header>
+        <div id="top_firld_main" data-aos="zoom-out-down"  data-aos-duration="1100">
+          <div><img class="firld_logo" src="/StockMemo.png" alt="StockMemo" height="80"></div>
+          <h2><span>企業名を、その場でメモする<span class="title_under_bar">Stock Memo</span></span></h2>
+          <div class="frame">
+            <!-- ログイン時のビュー -->
+            <% if user_signed_in? %>
+              <div class="about-firld_left clerefix">
+                <div class="about-firld-title">
+                  <h3><strong>企業をメモする</strong></h3>
+                </div>
+                <%= link_to new_company_path, data: {"turbolinks" => false} do %>
+                  <button class="button type3"><span>企業登録</span></button>
+                <% end %>
+              </div>
+              <div class="about-firld_right clerefix">
+                <div class="about-firld-title">
+                  <h3><strong>メモした企業を見る</strong></h3>
+                </div>
+                <%= link_to companies_path, data: {"turbolinks" => false} do %>
+                  <button class="button type3"><span>企業一覧</span></button>
+                <% end %>
+              </div>
+              <!-- 未ログイン時のビュー -->
+              <% else %>
+              <div class="about-firld_left clerefix">
+                <div class="about-firld-title">
+                  <h3><strong>会員登録がまだの方</strong></h3>
+                </div>
+                <%= link_to new_user_registration_path, data: {"turbolinks" => false} do %>
+                  <button class="button type3"><span>新規登録</span></button>
+                <% end %>
+              </div>
+              <div class="about-firld_right clerefix">
+                <div class="about-firld-title">
+                  <h3><strong>会員登録がお済みの方</strong></h3>
+                </div>
+                <%= link_to new_user_session_path, data: {"turbolinks" => false} do %>
+                  <button class="button type3"><span>ログイン</span></button>
+                <% end %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
+        </div>
+      </div>
+    </section>
+    <!-- ハンバーガーメニュー -->
+    <div class="header responsib-geader">
+          <%= link_to root_path do %>
+            <img class="logo" src="/StockMemo.png" alt="StockMemo" height="50">
+          <% end %>
+      <div class="el_humburger">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+      <div id="navigation" class="navigation">
+        <div class="navigation_screen">
+          <nav class="navigation_wrapper">
+            <% if user_signed_in? %>
+              <div class="navigation_item"><%= link_to '企業登録', new_company_path, data: {"turbolinks" => false} %></div>
+              <div class="navigation_item"><%= link_to '企業一覧', companies_path, data: {"turbolinks" => false} %></div>
+              <div class="navigation_item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {"turbolinks" => false} %></div>
+            <% else %>
+              <div class="navigation_item"><%= link_to '新規登録', new_user_registration_path, data: {"turbolinks" => false} %></div>
+              <div class="navigation_item"><%= link_to 'ログイン', new_user_session_path, data: {"turbolinks" => false} %></div>
+            <% end %>
+          </nav>
+        </div>
       </div>
     </div>
-
-     </div>
-  </section>
-
-
-
-
+    <!-- フッター -->
     <div id="footer_sab" class="clerefix">
       <div class="footer-left">
         <!-- ログイン時のビュー -->
         <% if user_signed_in? %>
           <ul id="footer-menu">
             <li>
-              <%= link_to new_company_path do %>
+              <%= link_to new_company_path, data: {"turbolinks" => false} do %>
               <span>企業登録</span>
               <% end %>
             </li>
             <li>
-              <%= link_to new_company_path do %>
+              <%= link_to companies_path, data: {"turbolinks" => false} do %>
               <span>企業一覧</span>
               <% end %>
             </li>
             <li>
-              <%= link_to new_company_path do %>
+              <%= link_to destroy_user_session_path, method: :delete, data: {"turbolinks" => false} do %>
               <span>ログアウト</span>
               <% end %>
             </li>
@@ -140,18 +159,12 @@
       <div class="space_footer"></div>
       </div>
     </div>
-
     <footer class="clerefix">
       <span class="footer-text">Copyright ©StockMemo</span>
     </footer>
-
-
-
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-
-
   </body>
 </html>
