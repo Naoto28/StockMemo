@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3' #Herokuへのデプロイのため9行目から移動
+  # gem 'sqlite3' #Herokuへのデプロイのため9行目から移動
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -74,11 +74,9 @@ gem 'jquery-rails'
 gem 'nested_form'
 gem 'jquery-turbolinks'
 
-group :production do #Herokuへのデプロイのため追加
-  gem 'pg'
-end
+# group :production do #Herokuへのデプロイのため追加
+#   gem 'pg'
+# end
 
-# gem 'sqlite3', groups: %w(test development), require: false
-
-# gem 'pg', groups: %w(production), require: false
-
+gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: :production
