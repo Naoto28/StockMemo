@@ -138,14 +138,14 @@
 
 /*ボタン*/
 
-.type3 span {
+.user_sign_btn span {
     color: black;
     font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-weight: bold;
 }
 
-.type3::after,
-.type3::before {
+.user_sign_btn::after,
+.user_sign_btn::before {
   content: '';
   display: block;
   position: absolute;
@@ -156,7 +156,7 @@
   border-radius: 1px;
 }
 
-.type3::after {
+.user_sign_btn::after {
   bottom: 0;
   right: 0;
   border-top-color: transparent;
@@ -165,7 +165,7 @@
   border-right-color: #42849a;
 }
 
-.type3::before {
+.user_sign_btn::before {
   top: 0;
   left: 0;
   border-bottom-color: transparent;
@@ -174,21 +174,19 @@
   border-left-color: #42849a;
 }
 
-.type3:hover:after,
-.type3:hover:before {
+.user_sign_btn:hover:after,
+.user_sign_btn:hover:before {
   border-bottom-color: #42849a;
   border-right-color: #42849a;
   border-top-color: #42849a;
   border-left-color: #42849a;
-/*      width: 103%;
-  height: 107%;*/
   width: 103%;
   height: 107%;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 
-.type3 {
+.user_sign_btn {
   position: relative;
   padding: 1em 1.5em;
   border: none;

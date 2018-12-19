@@ -38,25 +38,6 @@
   margin: 5px 0px;
 }
 
-/*ボタン*/
-
-// .btn-primary {
-//   background-color: #347a92;
-//   border-color: #176a87;
-//   padding: 10px 50px;
-// }
-
-// .btn-primary:hover {
-//   background-color: #5f8d9c;
-//   border-color: #176a87;
-//   transition-duration: .4s;
-// }
-
-// .btn-primary[disabled]:hover {
-//   background-color: #5f8d9c;
-//   border-color: #176a87;
-// }
-
 /*index*/
 
 table {
@@ -113,6 +94,18 @@ tbody {
 
 .company_table th:first-child {
   border: none;
+}
+
+.stock_register_date {
+  width: 120px;
+}
+
+.company_name {
+  width: 200px;
+}
+
+.stock_code {
+  width: 120px;
 }
 
 #company_list a {

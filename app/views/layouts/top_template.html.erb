@@ -47,7 +47,7 @@
                   <h3><strong>企業をメモする</strong></h3>
                 </div>
                 <%= link_to new_company_path, data: {"turbolinks" => false} do %>
-                  <button class="button type3"><span>企業登録</span></button>
+                  <button class="button user_sign_btn"><span>企業登録</span></button>
                 <% end %>
               </div>
               <div class="about-firld_right clerefix">
@@ -55,7 +55,7 @@
                   <h3><strong>メモした企業を見る</strong></h3>
                 </div>
                 <%= link_to companies_path, data: {"turbolinks" => false} do %>
-                  <button class="button type3"><span>企業一覧</span></button>
+                  <button class="button user_sign_btn"><span>企業一覧</span></button>
                 <% end %>
               </div>
               <!-- 未ログイン時のビュー -->
@@ -65,7 +65,7 @@
                   <h3><strong>会員登録がまだの方</strong></h3>
                 </div>
                 <%= link_to new_user_registration_path, data: {"turbolinks" => false} do %>
-                  <button class="button type3"><span>新規登録</span></button>
+                  <button class="button user_sign_btn"><span>新規登録</span></button>
                 <% end %>
               </div>
               <div class="about-firld_right clerefix">
@@ -73,7 +73,7 @@
                   <h3><strong>会員登録がお済みの方</strong></h3>
                 </div>
                 <%= link_to new_user_session_path, data: {"turbolinks" => false} do %>
-                  <button class="button type3"><span>ログイン</span></button>
+                  <button class="button user_sign_btn"><span>ログイン</span></button>
                 <% end %>
               </div>
             <% end %>
