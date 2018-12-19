@@ -77,6 +77,3 @@ gem 'jquery-turbolinks'
 # group :production do #Herokuへのデプロイのため追加
 #   gem 'pg'
 # end
-
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production

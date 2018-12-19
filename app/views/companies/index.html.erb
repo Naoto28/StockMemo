@@ -4,18 +4,18 @@
     <table class="company_table">
       <thead>
         <tr>
-          <th class="value">登録日時</th>
-          <th class="value">証券コード</th>
-          <th class="value">企業名</th>
+          <th class="value stock_register_date">登録日時</th>
+          <th class="value stock_code">証券コード</th>
+          <th class="value company_name">企業名</th>
           <th>メモ</th>
         </tr>
       </thead>
         <tbody>
           <% @company.each do |f| %>
             <tr id="company_list">
-              <td class="value"><%= f.created_at.strftime('%Y/%m/%d') %></td>
-              <td class="value" id="pages"><%= link_to "https://minkabu.jp/stock/#{f.stock_code}", target: "_blank" do %><%= f.stock_code %></td><% end %>
-              <td class="value" id="pages"><%= link_to company_path(f), data: {"turbolinks" => false} do %><%= f.company_name %></td><% end %>
+              <td class="value stock_register_date"><%= f.created_at.strftime('%Y/%m/%d') %></td>
+              <td class="value stock_code" id="pages"><%= link_to "https://minkabu.jp/stock/#{f.stock_code}", target: "_blank" do %><%= f.stock_code %></td><% end %>
+              <td class="value company_name" id="pages"><%= link_to company_path(f), data: {"turbolinks" => false} do %><%= f.company_name %></td><% end %>
               <td id="pages"><%= f.text.truncate(31) %></td>
             </tr>
           <% end %>

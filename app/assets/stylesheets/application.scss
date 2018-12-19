@@ -145,7 +145,7 @@ header img {
   line-height: 30px;
 }
 
-.maru1 {
+.rank_sercle {
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -158,7 +158,7 @@ header img {
   color: black;
 }
 
-.maru2 {
+.rank_list:nth-child(2) .rank_sercle {
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -171,7 +171,7 @@ header img {
   color: black;
 }
 
-.maru3 {
+.rank_list:nth-child(3) .rank_sercle {
   height: 30px;
   width: 30px;
   border-radius: 50%;
