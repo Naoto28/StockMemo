@@ -73,6 +73,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'nested_form'
 gem 'jquery-turbolinks'
+gem 'rails_12factor', group: :production
 
 group :production do #Herokuへのデプロイのため追加
   gem 'pg'
