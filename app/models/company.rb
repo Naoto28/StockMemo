@@ -5,7 +5,7 @@ class Company < ApplicationRecord
   validates :company_name, presence: true
 
   def getRankings(limit)
-    group_stock_code = Company.group(:stock_code).order('count() desc').limit(limit)
+    group_stock_code = Company.group(:stock_code).order('count(*) desc').limit(limit)
     return group_stock_code
   end
 end
